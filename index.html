@@ -80,15 +80,18 @@
           justify-content: center;
           align-items: center;
           text-align: center;
-          padding: 0 1rem; /* Adds some side spacing on small screens */
           flex-direction: column;
-          white-space: normal; /* Allow text to wrap */
+          padding: 0 1rem; /* add space on sides for mobile screens */
+          white-space: normal; /* ensures text wraps */
+          width: 100%;
         }
         
         .banner-text {
-          max-width: 90vw; /* Keep it within the screen bounds */
+          max-width: 90vw; /* limits width on mobile so it wraps nicely */
           line-height: 1.4;
+          word-wrap: break-word;
         }
+
 
         /* Scroll icon styles remain as-is */
         .scroll-down {
@@ -163,10 +166,11 @@
     </nav>
 
     <!-- First Parallax Section with Logo and Text -->
- <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <!-- Banner logo -->
     <img src="./img/eagle2.png" alt="Kansas Eagle Emblem" class="parallax-logo center-image">
 
-    <!-- Centered banner text -->
+    <!-- Centered and wrapped banner text -->
     <div class="w3-display-middle banner-text-container">
         <span class="w3-center w3-padding-large w3-black w3-xlarge w3-animate-opacity banner-text">
             Kansas politicians stopped listening. We're just getting started.
