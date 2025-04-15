@@ -85,27 +85,24 @@
             height: auto;
         }
 
-        /* Responsive logo in parallax section */
-        .parallax-logo {
-            max-width: 200px;
-        }
-	.kansas-statics {
-	  position: relative;
-	  z-index: 2;
+	/* Center and size the logo image properly */
+	.center-image,
+	.parallax-logo {
+	  display: block;
+	  margin: 0 auto;
+	  max-width: 200px;
+	  width: 100%;
+	  height: auto;
 	}
 	
-	.bgimg-2 {
-	  position: relative;
-	  z-index: 0;
-	}
-
-        /* Optional: Adjust logo for smaller screens */
+	/* Optional: Adjust logo for smaller screens */
 	@media (max-width: 768px) {
 	  .center-image,
 	  .parallax-logo {
 	    max-width: 150px; /* slightly smaller on mobile */
 	  }
 	}
+
         .banner-text-container {
           display: flex;
           justify-content: center;
