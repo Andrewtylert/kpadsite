@@ -40,7 +40,11 @@
             background-image: url(https://media.tenor.com/yqr_GZdBYzEAAAAC/fallout-please-stand-by.gif);
             min-height: 100%;
         }
-
+        .wrap-text {
+          white-space: normal; /* ensures wrapping */
+          word-wrap: break-word; /* breaks long words */
+          overflow-wrap: break-word; /* modern version of word-wrap */
+        }
         /* Responsive behavior for parallax on smaller screens */
         @media only screen and (max-width: 1024px) {
 
@@ -67,10 +71,23 @@
         }
 
         @media only screen and (max-width: 600px) {
-            .parallax-logo {
+        .parallax-logo {
                 max-width: 120px;
                 /* Alternatively, use display: none; to remove duplicate */
-            }
+        }
+        .banner-text-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 0 1rem; /* Adds some side spacing on small screens */
+          flex-direction: column;
+          white-space: normal; /* Allow text to wrap */
+        }
+        
+        .banner-text {
+          max-width: 90vw; /* Keep it within the screen bounds */
+          line-height: 1.4;
         }
 
         /* Scroll icon styles remain as-is */
@@ -146,16 +163,16 @@
     </nav>
 
     <!-- First Parallax Section with Logo and Text -->
-    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-        <!-- Banner logo; adjust visibility on mobile if needed -->
-        <img src="./img/eagle2.png" alt="Kansas Eagle Emblem" class="parallax-logo center-image">
-        <div class="w3-display-middle" style="white-space:nowrap;">
-            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-animate-opacity banner-text">
-                Kansas politicians stopped listening. We're just getting started.
-            </span>
-        </div>
-    </div>
+ <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <img src="./img/eagle2.png" alt="Kansas Eagle Emblem" class="parallax-logo center-image">
 
+    <!-- Centered banner text -->
+    <div class="w3-display-middle banner-text-container">
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-animate-opacity banner-text">
+            Kansas politicians stopped listening. We're just getting started.
+        </span>
+    </div>
+</div>
     <!-- Scroll icon remains as-is -->
     <div class="scroll-down"></div>
 
