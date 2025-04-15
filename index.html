@@ -99,11 +99,13 @@
 	  z-index: 0;
 	}
 
-        @media only screen and (max-width: 1024px) {
-        .parallax-logo {
-                max-width: 1024px;
-                /* Alternatively, use display: none; to remove duplicate */
-        }
+        /* Optional: Adjust logo for smaller screens */
+	@media (max-width: 768px) {
+	  .center-image,
+	  .parallax-logo {
+	    max-width: 150px; /* slightly smaller on mobile */
+	  }
+	}
         .banner-text-container {
           display: flex;
           justify-content: center;
@@ -291,7 +293,7 @@
 <div class="bgimg-2 w3-display-container w3-opacity-min" style="position: relative; z-index: 0;">
   <div class="w3-display-middle" style="text-align: center;">
     <span class="w3-xxlarge w3-text-white w3-wide">
-      THE NUMBERS DON’T LIE,<br>OUR VOICES ARE BEING IGNORED.
+      THE NUMBERS DON’T LIE,<br>OUR VOICES ARE BEING IGNORED. <!-- Is this supposed to be invisible? -AA>
     </span>
   </div>
 </div>
